@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.7">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="24">C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`</File>
+          <FormatSpecificOptions>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>InboxCopy.accdb
+Table=`Inbox`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="Importance" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="Icon" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Priority" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="Subject" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="From" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Message To Me" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Bool" />
+            <Field name="Message CC to Me" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Bool" />
+            <Field name="Sender Name" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="CC" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="To" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Received" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="DateTime" />
+            <Field name="Message Size" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="Contents" size="16777216" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Created" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="DateTime" />
+            <Field name="Modified" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="DateTime" />
+            <Field name="Subject Prefix" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Has Attachments" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Bool" />
+            <Field name="Normalized Subject" size="255" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+            <Field name="Object Type" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="Content Unread" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="Int32" />
+            <Field name="SERVER_ID" size="5" source="File: C:\PROJECTS\DATA\SERVER_DOWN\InboxCopy.accdb|||`Inbox`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="222" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="47">C:\PROJECTS\DATA\FOR_QLIKVIEW\SERVER_DOWN.qvx</File>
+          <Passwords />
+          <FormatSpecificOptions />
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>SERVER_DOWN.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>PROCESS_SERVER_DOWN</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

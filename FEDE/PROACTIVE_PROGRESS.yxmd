@@ -1,0 +1,379 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="426" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="24">C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`ERROR_FILES_WITH_DEMOGRAPHICS`</File>
+          <FormatSpecificOptions>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>WIZ_REPORTING.accdb
+Table=`ERROR_FILES_WITH_DEMOGRAPHICS`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CDSID" size="10" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`ERROR_FILES_WITH_DEMOGRAPHICS`" type="V_WString" />
+            <Field name="FORD_COUNTRY" size="25" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`ERROR_FILES_WITH_DEMOGRAPHICS`" type="V_WString" />
+            <Field name="FORD_DOMAIN" size="25" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`ERROR_FILES_WITH_DEMOGRAPHICS`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings>
+        <Position x="42" y="594" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OutputFormat"><![CDATA[yyyyMMdd	]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="DateTimeNow.yxmc" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="222" y="510" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Target_CDSID" selected="True" />
+                <SelectField field="Target_FORD_COUNTRY" selected="True" />
+                <SelectField field="Target_FORD_DOMAIN" selected="True" />
+                <SelectField field="Source_DateTimeNow" selected="True" rename="SCANNED" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="630" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="47">C:\PROJECTS\DATA\FOR_QLIKVIEW\ERROR_FILE_PROGRESS.qvx</File>
+          <Passwords />
+          <FormatSpecificOptions />
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ERROR_FILE_PROGRESS.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="42" y="690" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="24">C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`W7O2016_WITH_DEMOGRAPHICS`</File>
+          <FormatSpecificOptions>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>WIZ_REPORTING.accdb
+Table=`W7O2016_WITH_DEMOGRAPHICS`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="CDSID" size="10" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`W7O2016_WITH_DEMOGRAPHICS`" type="V_WString" />
+            <Field name="FORD_COUNTRY" size="25" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`W7O2016_WITH_DEMOGRAPHICS`" type="V_WString" />
+            <Field name="FORD_DOMAIN" size="25" source="File: C:\PROJECTS\ACCUREV\WIZ\VBA\WIZ_REPORTING.accdb|`W7O2016_WITH_DEMOGRAPHICS`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AppendFields.AppendFields">
+        <Position x="222" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <CartesianMode>Error</CartesianMode>
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Target_CDSID" selected="True" />
+                <SelectField field="Target_FORD_COUNTRY" selected="True" />
+                <SelectField field="Target_FORD_DOMAIN" selected="True" />
+                <SelectField field="Source_DateTimeNow" selected="True" rename="SCANNED" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAppendFields" />
+    </Node>
+    <Node ToolID="25">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="666" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="47">C:\PROJECTS\DATA\FOR_QLIKVIEW\WINDOWS7_PROGRESS.qvx</File>
+          <Passwords />
+          <FormatSpecificOptions />
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>WINDOWS7_PROGRESS.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="26">
+      <GuiSettings>
+        <Position x="54" y="846" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="OutputFormat"><![CDATA[yyyyMMdd	]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings Macro="DateTimeNow.yxmc" />
+    </Node>
+    <Node ToolID="27">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="222" y="378" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="47" SearchSubDirs="False" RecordLimit="">C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ERROR_FILE_PROGRESS_BASE.qvx</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ERROR_FILE_PROGRESS_BASE.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;CDSID&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="CDSID" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ERROR_FILE_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;FORD_COUNTRY&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="FORD_COUNTRY" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ERROR_FILE_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;FORD_DOMAIN&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="FORD_DOMAIN" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ERROR_FILE_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;SCANNED&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="SCANNED" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ERROR_FILE_PROGRESS_BASE.qvx" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="30">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="234" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="47" SearchSubDirs="False" RecordLimit="">C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\WINDOWS7_PROGRESS_BASE.qvx</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>WINDOWS7_PROGRESS_BASE.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;CDSID&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="CDSID" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\WINDOWS7_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;FORD_COUNTRY&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="FORD_COUNTRY" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\WINDOWS7_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;FORD_DOMAIN&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="FORD_DOMAIN" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\WINDOWS7_PROGRESS_BASE.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;SCANNED&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="SCANNED" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\WINDOWS7_PROGRESS_BASE.qvx" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="32">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="402" y="450" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+    <Node ToolID="33">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Union.Union">
+        <Position x="414" y="762" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <ByName_ErrorMode>Warning</ByName_ErrorMode>
+          <ByName_OutputMode>All</ByName_OutputMode>
+          <Mode>ByName</Mode>
+          <SetOutputOrder value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnion" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="21" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Source" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="27" Connection="Output" />
+      <Destination ToolID="32" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="24" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="26" Connection="Output" />
+      <Destination ToolID="24" Connection="Source" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="30" Connection="Output" />
+      <Destination ToolID="33" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="32" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="33" Connection="Output" />
+      <Destination ToolID="25" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>PROACTIVE_PROGRESS</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

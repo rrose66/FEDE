@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.7">
+  <Nodes>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="186" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField field="FILE_FULL_PATH" type="String" size="64" expression="[FILE_NAME]+&quot;.JAVA&quot;" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>FILE_FULL_PATH=[FILE_NAME]+".JAVA"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.JoinMultiple.JoinMultiple">
+        <Position x="402" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <JoinByRecPos value="False" />
+          <JoinFields>
+            <JoinInfo connection="#1">
+              <Field field="FILE_FULL_PATH" />
+            </JoinInfo>
+            <JoinInfo connection="#2">
+              <Field field="FILE_FULL_PATH" />
+            </JoinInfo>
+          </JoinFields>
+          <CartesianMode>Error</CartesianMode>
+          <OutputJoinOnly value="False" />
+          <SelectConfiguration>
+            <Configuration outputConnection="Output">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Input_#2_FILE_FULL_PATH" selected="True" rename="Input_#2_FILE_FULL_PATH" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="498" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="METHOD_SOURCE" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="METHOD_NAME" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <SelectFields>
+                <SelectField field="Right_ID" selected="True" rename="Right_ID" />
+                <SelectField field="Right_Modified" selected="True" rename="Right_Modified" />
+                <SelectField field="Right_Created" selected="True" rename="Right_Created" />
+                <SelectField field="Right_Created By" selected="True" rename="Right_Created By" />
+                <SelectField field="Right_Modified By" selected="True" rename="Right_Modified By" />
+                <SelectField field="Right_Version" selected="True" rename="Right_Version" />
+                <SelectField field="Right_Item Child Count" selected="True" rename="Right_Item Child Count" />
+                <SelectField field="Right_Folder Child Count" selected="True" rename="Right_Folder Child Count" />
+                <SelectField field="Right_App Created By" selected="True" rename="Right_App Created By" />
+                <SelectField field="Right_App Modified By" selected="True" rename="Right_App Modified By" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="762" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\TEST_CASES_IMPACTED_BY_CHANGES_SEEN_IN_ACCUREV.csv</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TEST_CASES_IMPACTED_BY_CHANGES_SEEN_IN_ACCUREV.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="630" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <SelectFields>
+            <SelectField field="FILE_NAME" selected="True" />
+            <SelectField field="METHOD_SOURCE" selected="True" />
+            <SelectField field="TEST_CASE_ID" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" FileFormat="47" SearchSubDirs="False" RecordLimit="">C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\TC_BOM_FILES_AND_METHODS.qvx</File>
+          <FormatSpecificOptions />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TC_BOM_FILES_AND_METHODS.qvx</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;FILE_NAME&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="FILE_NAME" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\TC_BOM_FILES_AND_METHODS.qvx" type="V_WString" />
+            <Field description="&lt;QvxFieldHeader&gt;&lt;FieldName&gt;METHOD_SOURCE&lt;/FieldName&gt;&lt;Type&gt;QVX_TEXT&lt;/Type&gt;&lt;Extent&gt;QVX_COUNTED&lt;/Extent&gt;&lt;NullRepresentation&gt;QVX_NULL_FLAG_SUPPRESS_DATA&lt;/NullRepresentation&gt;&lt;ByteWidth&gt;4&lt;/ByteWidth&gt;&lt;FieldFormat&gt;&lt;Type&gt;ASCII&lt;/Type&gt;&lt;/FieldFormat&gt;&lt;/QvxFieldHeader&gt;" name="METHOD_SOURCE" size="1073741823" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\TC_BOM_FILES_AND_METHODS.qvx" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="102" y="366" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="24">C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`</File>
+          <FormatSpecificOptions>
+            <NoProgress>False</NoProgress>
+            <ReadUncommitted>False</ReadUncommitted>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>TC_BOM_ACCUREV_CHANGED_FILES.accdb
+Table=`TC_METHODS_AND_TEST_CASES`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="ID" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="Int32" />
+            <Field name="TEST_CASE_ID" size="25" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="METHOD_NAME" size="100" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="SCANNED" size="8" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="Encoded Absolute URL" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="Item Type" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="Path" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="URL Path" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="Workflow Instance ID" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+            <Field name="File Type" size="255" source="File: C:\PROJECTS\DATA\TC_BOM_ACCUREV_CHANGED_FILES.accdb|`TC_METHODS_AND_TEST_CASES`" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="21">C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ACCU_REV_MODIFIED_FILES.TXT</File>
+          <FormatSpecificOptions>
+            <TrimWhiteSpace>Unset</TrimWhiteSpace>
+            <LineEndStyle>Unset</LineEndStyle>
+            <AllowLongLines>Unset</AllowLongLines>
+            <CodePage>28591</CodePage>
+            <AllowShortLines>Unset</AllowShortLines>
+            <FlatFileXML>
+              <flatfile version="1">
+                <file eoltype="crlf" allowShortLines="t" allowLongLines="t" trimWhiteSpace="t" />
+                <fields>
+                  <field name="Field_1" type="V_String" length="105" />
+                </fields>
+              </flatfile>
+            </FlatFileXML>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>ACCU_REV_MODIFIED_FILES.TXT</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Field_1" size="105" source="File: C:\PROJECTS\DATA\FILES_INDICATING_END_OF_PROCESS\ACCU_REV_MODIFIED_FILES.TXT" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="210" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField field="FILE_FULL_PATH" type="String" size="255" expression="&quot;C:\PROJECTS\ACCUREV\BOMinFEDE_v1.0_Collab_DEV_D02\&quot; + Substring([Field_1],3,(FindString([Field_1],&quot;BOMinFEDE_v1.0_QA&quot;)-5))" />
+            <FormulaField field="endOfRange" type="Double" size="8" expression="FindString([Field_1],&quot;BOMinFEDE_v1.0_QA&quot;)" />
+            <FormulaField field="LenOfLine" type="Double" size="8" expression="length([Field_1] )&#xA;" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[FILE_FULL_PATH="C:\PROJECTS\ACCUREV\BOMinFEDE_v1.0_Collab_DEV...
+endOfRange=FindString([Field_1],"BOMinFEDE_v1.0_QA")
+LenOfLine=length([Field_1] )
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection name="#1">
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="10" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Output" />
+      <Destination ToolID="10" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>METHOD_MAPPED_TO_ACCUREV</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
